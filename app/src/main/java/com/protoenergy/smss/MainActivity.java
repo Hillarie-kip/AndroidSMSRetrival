@@ -71,12 +71,11 @@ public class MainActivity extends AppCompatActivity {
         if (indexBody < 0 || !smsInboxCursor.moveToFirst()) return;
         arrayAdapter.clear();
         do {
-            //if (smsInboxCursor.getString(indexBody).contains("pesa") || smsInboxCursor.getString(indexBody).contains("pro gas")) {
-                String str = "" + smsInboxCursor.getString(idColumn) + "\n" + "SMS From: " + smsInboxCursor.getString(indexAddress) + "\n" + smsInboxCursor.getString(datemade) + "\n" + "To Hillarie" + "\n" + smsInboxCursor.getString(indexBody) + "\n";
+                  String str = "" + smsInboxCursor.getString(idColumn) + "\n" + "SMS From: " + smsInboxCursor.getString(indexAddress) + "\n" + smsInboxCursor.getString(datemade) + "\n" + "To Hillarie" + "\n" + smsInboxCursor.getString(indexBody) + "\n";
                 arrayAdapter.add(str);
                 saveMasterSaleToLocalStorage(str);
 
-           //   }
+
 
 
         } while (smsInboxCursor.moveToNext());
